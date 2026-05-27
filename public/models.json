@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "ChatGPT",
+    "description": "AI chatbot for writing, coding, and learning.\nHelps with research, ideas, and productivity tasks.",
+    "price": 0,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+    "status": "popular"
+  },
+  {
+    "id": 2,
+    "title": "Midjourney",
+    "description": "AI image generator from text prompts.\nCreates highly detailed artistic visuals.",
+    "price": 10,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Midjourney_Emblem.png",
+    "status": "favourite"
+  },
+  {
+    "id": 3,
+    "title": "DALL·E",
+    "description": "OpenAI image generation model.\nTurns text descriptions into realistic images.",
+    "price": 15,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg",
+    "status": "popular"
+  },
+  {
+    "id": 4,
+    "title": "Jasper AI",
+    "description": "AI writing assistant for marketing content.\nHelps create blogs, ads, and social posts.",
+    "price": 49,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Jasper_AI_logo.png",
+    "status": "mostwanted"
+  },
+  {
+    "id": 5,
+    "title": "Copy.ai",
+    "description": "AI-powered copywriting tool.\nGenerates emails, ads, and product descriptions.",
+    "price": 36,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Copy.ai_logo.png",
+    "status": "popular"
+  },
+  {
+    "id": 6,
+    "title": "Notion AI",
+    "description": "AI assistant inside Notion workspace.\nHelps summarize, write, and organize notes.",
+    "price": 8,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
+    "status": "favourite"
+  },
+  {
+    "id": 7,
+    "title": "Grammarly",
+    "description": "AI writing and grammar checker.\nImproves clarity, tone, and correctness of text.",
+    "price": 12,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Grammarly_logo.png",
+    "status": "popular"
+  },
+  {
+    "id": 8,
+    "title": "Runway ML",
+    "description": "AI video editing and generation tool.\nUsed for cinematic effects and creative videos.",
+    "price": 15,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Runway_logo.png",
+    "status": "mostwanted"
+  },
+  {
+    "id": 9,
+    "title": "Synthesia",
+    "description": "AI video generator with avatars.\nCreates professional videos from text scripts.",
+    "price": 30,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Synthesia_logo.png",
+    "status": "favourite"
+  },
+  {
+    "id": 10,
+    "title": "GitHub Copilot",
+    "description": "AI coding assistant for developers.\nSuggests code and speeds up programming workflow.",
+    "price": 10,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+    "status": "popular"
+  },
+  {
+    "id": 11,
+    "title": "Pictory AI",
+    "description": "AI video creation from text content.\nTurns blogs into engaging short videos.",
+    "price": 19,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Pictory_logo.png",
+    "status": "mostwanted"
+  },
+  {
+    "id": 12,
+    "title": "Leonardo AI",
+    "description": "AI image generation platform.\nCreates game assets, art, and design visuals.",
+    "price": 12,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Leonardo_AI_logo.png",
+    "status": "favourite"
+  }
+]
