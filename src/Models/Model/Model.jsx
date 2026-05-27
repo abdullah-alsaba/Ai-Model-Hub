@@ -1,4 +1,6 @@
 import "../../index.css";
+import { TiStarFullOutline } from "react-icons/ti";
+
 
 const Model = ({ model }) => {
   return (
@@ -8,27 +10,33 @@ const Model = ({ model }) => {
         {/* Badge */}
         <span
           className={`
-            absolute top-5 right-5
-            text-white text-[12px]
-            font-semibold
-            px-5 py-2
-            rounded-full
-            tracking-wide
-            min-w-36.25
-            text-center
+    absolute top-5 right-5
+    text-white text-[12px]
+    font-semibold
+    px-5 py-2
+    rounded-full
+    tracking-wide
+    min-w-36
+    flex items-center justify-center gap-1.5
 
-            ${
-              model.status === "Popular"
-                ? "bg-red-600"
-                : model.status === "Favourite"
-                  ? "bg-orange-500"
-                  : "bg-yellow-500"
-            }
-          `}
+    ${
+      model.status === "Popular"
+        ? "bg-red-600"
+        : model.status === "Favourite"
+          ? "bg-orange-500"
+          : "bg-[#ff9900] text-black"
+    }
+  `}
         >
-          {model.status === "Popular" && "🔥"}
-          {model.status === "Favourite" && "🧡"}
-          {model.status === "Most Wanted" && "⭐"} {model.status}
+          {model.status === "Popular" && <span className="text-sm">🔥</span>}
+
+          {model.status === "Favourite" && <span className="text-sm">🧡</span>}
+
+          {model.status.toLowerCase() === "most wanted" && (
+            <TiStarFullOutline className="text-[15px] text-[#e3be39]" />
+          )}
+
+          {model.status}
         </span>
 
         {/* Model Image */}
@@ -58,10 +66,14 @@ const Model = ({ model }) => {
               model.price === "Free" ? "text-green-500" : "text-black"
             }`}
           >
-            {model.price === "Free" ? "Free" : `$${model.price}`}
+            {model.price === 0 ? (
+              <p className="text-[#00d491]">Free</p>
+            ) : (
+              `$${model.price}`
+            )}
           </span>
 
-          {model.price !== "Free" && (
+          {model.price !== 0 && (
             <span className="text-gray-500 text-lg mb-1">/month</span>
           )}
         </div>
