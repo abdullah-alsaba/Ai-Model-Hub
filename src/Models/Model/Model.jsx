@@ -47,7 +47,7 @@ const Model = ({ model }) => {
         </h1>
 
         {/* Description */}
-        <p className="text-gray-500 text-[15px] leading-7 mb-7 min-h-[90px]">
+        <p className="text-gray-500 text-[15px] leading-7 mb-7 min-h-22.5">
           {model.description}
         </p>
 
