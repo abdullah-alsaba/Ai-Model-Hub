@@ -1,11 +1,14 @@
+import { use } from "react";
+import "../index.css"
 
-
-const Models = () => {
-    return (
-        <div>
-            <h1 className="text-8xl">hello</h1>
-        </div>
-    );
+const Models = ({ modelsPromise }) => {
+    const models = use(modelsPromise)
+    console.log(models)
+  return (
+    <div className="container mx-auto px-4 flex justify-center items-center">
+      
+    </div>
+  );
 };
 
 export default Models;
