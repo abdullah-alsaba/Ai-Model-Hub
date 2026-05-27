@@ -3,13 +3,23 @@ import "../../index.css";
 import { TiStarFullOutline } from "react-icons/ti";
 import { useState } from "react";
 
-const Model = ({ model }) => {
+const Model = ({ model, cart, setCart }) => {
   const [isSubscribe, setIsSubscribe] = useState(false);
 
-  const handelSubscription = () => {
-    setIsSubscribe(true);
-    toast.success("Item added to cart");
-  };
+const handelSubscription = () => {
+  const isExist = cart.find((item) => item.id === model.id);
+
+  if (isExist) {
+    toast.error("Already subscribed");
+    return;
+  }
+
+  setIsSubscribe(true);
+
+  toast.success("Item added to cart");
+
+  setCart([...cart, model]);
+};
 
   return (
     <div className="bg-white border border-gray-200 rounded-[30px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">

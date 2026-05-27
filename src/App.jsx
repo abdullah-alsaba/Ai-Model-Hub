@@ -12,9 +12,13 @@ const fetchModels = async () => {
   const res = await fetch("./models.json")
   return res.json()
 }
-
+ 
 function App() {
-  const modelsPromise =fetchModels()
+
+  const modelsPromise = fetchModels()
+  
+ 
+  
   return (
     <>
       <NavBar />

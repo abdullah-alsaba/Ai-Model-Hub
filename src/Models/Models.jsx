@@ -11,7 +11,7 @@ const Models = ({ modelsPromise }) => {
   const models = use(modelsPromise);
 
   const [active, setActive] = useState("model")
-  
+  const [cart, setCart] = useState([]);
   
   
   return (
@@ -41,27 +41,34 @@ const Models = ({ modelsPromise }) => {
           }`}
           onClick={() => setActive("cart")}
         >
-          Cart (0)
+          Cart {cart.length}
         </a>
       </div>
 
+      {active === "model" && (
+        <div className="text-center">
+          <h1 className="font-bold text-5xl text-black">
+            Choose Your AI Model
+          </h1>
+          <p className="text-xl text-gray-500 ">
+            One subscription will gives you access to all frontier AI models.
+          </p>
+        </div>
+      )}
 
-      {active=== "model" && <div className="text-center">
-        <h1 className="font-bold text-5xl text-black">Choose Your AI Model</h1>
-        <p className="text-xl text-gray-500 ">
-          One subscription will gives you access to all frontier AI models.
-        </p>
-      </div>
-}
-      
       {active === "model" ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-20">
           {models.map((model) => (
-            <Model key={model.id} model={model}></Model>
+            <Model
+              key={model.id}
+              model={model}
+              cart={cart}
+              setCart={setCart}
+            ></Model>
           ))}
         </div>
       ) : (
-        <Cart />
+        <Cart cart={cart} setCart={setCart} />
       )}
     </div>
   );
