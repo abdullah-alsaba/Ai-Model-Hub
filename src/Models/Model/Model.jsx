@@ -18,6 +18,7 @@ const Model = ({ model }) => {
     tracking-wide
     min-w-36
     flex items-center justify-center gap-1.5
+    z-10
 
     ${
       model.status === "Popular"
@@ -40,11 +41,13 @@ const Model = ({ model }) => {
         </span>
 
         {/* Model Image */}
-        <img
-          className="w-40 h-40 object-contain"
-          src={model.image}
-          alt={model.title}
-        />
+        <div className="overflow-hidden flex items-center justify-center">
+          <img
+            className="w-40 h-40 object-contain transition-transform duration-500 hover:scale-110"
+            src={model.image}
+            alt={model.title}
+          />
+        </div>
       </div>
 
       {/* Bottom Content */}
