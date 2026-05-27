@@ -5,6 +5,7 @@ import Models from "./Models/Models";
 import NavBar from "./Navbar/Navbar";
 import "./index.css";
 import Loading from "./Loading/Loading";
+import { ToastContainer } from "react-toastify";
 
 
 const fetchModels = async () => {
@@ -22,6 +23,7 @@ function App() {
         <Models modelsPromise={modelsPromise} />
       </Suspense>
       <Footer />
+      <ToastContainer />
     </>
   );
 }

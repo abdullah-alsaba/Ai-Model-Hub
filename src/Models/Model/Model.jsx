@@ -1,8 +1,16 @@
+import { toast } from "react-toastify";
 import "../../index.css";
 import { TiStarFullOutline } from "react-icons/ti";
-
+import { useState } from "react";
 
 const Model = ({ model }) => {
+  const [isSubscribe, setIsSubscribe] = useState(false);
+
+  const handelSubscription = () => {
+    setIsSubscribe(true);
+    toast.success("Item added to cart");
+  };
+
   return (
     <div className="bg-white border border-gray-200 rounded-[30px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
       {/* Top Section */}
@@ -82,8 +90,11 @@ const Model = ({ model }) => {
         </div>
 
         {/* Button */}
-        <button className="w-full bg-red-600 hover:bg-red-700 transition-all duration-300 text-white font-semibold text-lg py-4 rounded-2xl shadow-lg shadow-red-500/20 cursor-pointer">
-          Subscribe Now
+        <button
+          className="w-full bg-red-600 hover:bg-red-700 transition-all duration-300 text-white font-semibold text-lg py-4 rounded-2xl shadow-lg shadow-red-500/20 cursor-pointer"
+          onClick={() => handelSubscription()}
+        >
+          {isSubscribe ? "Subscribed" : "Subscribe Now"}
         </button>
       </div>
     </div>
