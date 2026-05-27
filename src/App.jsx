@@ -1,3 +1,4 @@
+import Banner from "./Banner/Banner"
 import NavBar from "./Navbar/Navbar"
 
 
@@ -6,7 +7,8 @@ function App() {
 
   return (
     <>
-     <NavBar/>
+      <NavBar />
+      <Banner/>
     </>
   )
 }
